@@ -38,7 +38,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit some common twrp stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
 ```
-## Cleanup your aosp BoardConfig.mk
+## Cleanup your aosp BoardConfig.mk (Skip this step if you made your own device tree)
  - Remove the following and the files assosiated with the lines
 ```bash
 TARGET_FORCE_PREBUILT_KERNEL := true
@@ -105,7 +105,8 @@ BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
 ```
- - also add these to device.mk (partitions may be different depending on device)
+## device.mk stuff
+ - Add the following to device.mk
 ```bash
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
