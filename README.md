@@ -136,3 +136,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
  - from the folder named "RAMDISK" in your extracted vendor_boot.img copy the first_stage_ramdisk folder into prebuilt on the recovery tree and add the following to device.mk
 ```bash
 $(LOCAL_PATH)/prebuilt/first_stage_ramdisk/fstab.vendor:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.vendor
+```
+## On Devices with 3 ramdisks
+ - Incase you have a 3rd dlkm ramdisk study this link [AOSP VENDOR_BOOT](https://source.android.com/docs/core/architecture/partitions/vendor-boot-partitions)
+
